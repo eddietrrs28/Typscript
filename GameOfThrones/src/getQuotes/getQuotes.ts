@@ -22,6 +22,7 @@ export class getQuotesFromApi{
             house_name: quote.slug,
             house_slug: quote.slug
         }));
+        
         //this.saveQuote(listaQuotes);
     }
 
