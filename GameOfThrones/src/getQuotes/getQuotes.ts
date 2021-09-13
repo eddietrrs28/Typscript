@@ -6,7 +6,7 @@ import { Iquote } from "./interface/quote.interface";
 export class getQuotesFromApi{
     private axiosConfiguracion: AxiosRequestConfig = {
         method:'GET',
-        url:'https://game-of-thrones-quotes.herokuapp.com/v1/random/5',
+        url:'https://game-of-thrones-quotes.herokuapp.com/v1/random/72',
     }; 
     public async requestData(): Promise<void>{
         let listaQuotes: Iquote[] = [];
@@ -19,11 +19,11 @@ export class getQuotesFromApi{
             sentence: quote.sentence, 
             name: quote.name, 
             slug: quote.slug,
-            house_name: quote.slug,
-            house_slug: quote.slug
+            house_name: quote.house_name,
+            house_slug: quote.house_slug
         }));
         
-        //this.saveQuote(listaQuotes);
+        this.saveQuote(listaQuotes);
     }
 
     public async saveQuote(listaQuotes:Iquote[]){

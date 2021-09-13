@@ -9,16 +9,11 @@ const init = async () => {
     executegetQuotes();
 };
 
+init();
 
 const executegetQuotes=()=>{
     //Instanciamos la clase getQuotesFromApi y se guarda en la instancia en getQuotes.
     const getQuotes = new getQuotesFromApi();
 
-    getQuotes.getQuotesByAuthor('Jesse Pinkman')
+    getQuotes.requestData();
 };
-
-init();
-
-/*const getQuoteInstance = new getQuotesFromApi();
-
-getQuoteInstance.saveQuote();*/
